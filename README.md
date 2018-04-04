@@ -62,6 +62,7 @@ This is where you list OS compatibility, version compatibility, etc. If there
 are Known Issues, you might want to include them under their own heading here.
 
 For CentOS Linux distributions, first install EPEL repos: https://fedoraproject.org/wiki/EPEL
+
 If you aren't using changelog, put your release notes here (though you should
 consider using changelog). 
 

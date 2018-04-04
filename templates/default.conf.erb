@@ -5,3 +5,10 @@ IKE Authmode <%= @ike_authmode %>
 Xauth username <%= @username %>
 Xauth password <%= @password %>
 
+<% if @cafile -%>
+	CA-File = <%= @cafile %>
+<% end -%>
+
+<% if @cadir -%>
+	CA-Dir = <%= @cadir %>
+<% end -%>

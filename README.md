@@ -10,6 +10,7 @@ A simple Puppet Module for managing and configuring Cisco VPNC Client in Debian 
 
 vpnc is a VPN client for the Cisco 3000 VPN Concentrator, creating a IPSec-like connection as a tunneling network device for the local system. It uses the TUN/TAP driver in Linux kernel 2.4 and above and device tun(4) on BSD. The created connection is presented as a tunneling network device to the local system.
 
+
 ## Usage
 
 Add this class to hiera yaml conf file:
@@ -60,7 +61,7 @@ vpnc::cadir: '/etc/vpnc'
 This is where you list OS compatibility, version compatibility, etc. If there
 are Known Issues, you might want to include them under their own heading here.
 
-
+For CentOS Linux distributions, first install EPEL repos: https://fedoraproject.org/wiki/EPEL
 If you aren't using changelog, put your release notes here (though you should
 consider using changelog). 
 

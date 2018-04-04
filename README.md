@@ -27,9 +27,31 @@ vpnc::username: 'internet'
 vpnc::password: 'internet'
 ```
 
+
+
+### Authentication mode: 
+IKE Authmode <psk/cert/hybrid>
+
+- psk: pre-shared key (default)
+- cert: server + client certificate (not implemented yet)
+- hybrid: server certificate + xauth (if built with openssl support)
+
+
 IKE Authmode defaults to `psk`. To change it add a new value for `ike_authmode` variable in hiera.
 ```
 vpnc::ike_authmode: 'hybrid'
+```
+
+To add a filename or path to the CA-PEM-File or CA dir insert one of the follwoing options to hiera:
+
+CA File:
+```
+vpnc::cafile: '/etc/vpnc/vpn-example-com.pem'
+```
+
+CA dir:
+```
+vpnc::cadir: '/etc/vpnc'
 ```
 
 

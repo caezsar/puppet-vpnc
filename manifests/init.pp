@@ -52,6 +52,7 @@ class vpnc (
   $ike_authmode		= 'psk',
   $cafile		= undef,
   $cadir		= undef,
+  $localport0 = false,
 )
 { package { 'vpnc':
     ensure => 'installed',
@@ -64,7 +65,7 @@ class vpnc (
 #  }
 
   file { '/etc/vpnc/default.conf':
-    mode    => '0640',
+    mode    => '0600',
     owner   => root,
     group   => root,
     content => template('vpnc/default.conf.erb'),

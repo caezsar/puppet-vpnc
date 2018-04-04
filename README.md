@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # vpnc
 
 #### Table of Contents
@@ -96,3 +97,7 @@ know what the ground rules for contributing are.
 If you aren't using changelog, put your release notes here (though you should
 consider using changelog). You can also add any additional sections you feel
 are necessary or important to include here. Please use the `## ` header.
+=======
+# puppet-vpnc
+Puppet module to manage Cisco vpnc client
+>>>>>>> ddfe0b05c3b878f372a6901957dfb8d5ee461304

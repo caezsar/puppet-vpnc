@@ -50,6 +50,8 @@ class vpnc (
   $username		= '',
   $password		= '',
   $ike_authmode		= 'psk',
+  $cafile		= '',
+  $cadir		= '',
 )
 
 {

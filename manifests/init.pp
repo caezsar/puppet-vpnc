@@ -35,7 +35,7 @@
 # Authors
 # -------
 #
-# Author Name <author@domain.com>
+# Author Name <caezsar@yahoo.com>
 #
 # Copyright
 # ---------
@@ -44,11 +44,12 @@
 #
 class vpnc (
 
-  $gateway              = undef,
-  $id		            = '',
-  $secret 				= '',
-  $username				= '',
-  $password				= '',
+  $gateway		= undef,
+  $id			= '',
+  $secret		= '',
+  $username		= '',
+  $password		= '',
+  $ike_authmode		= 'psk',
 )
 
 {

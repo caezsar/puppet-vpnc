@@ -49,13 +49,18 @@ CA File:
 ```
 vpnc::cafile: '/etc/vpnc/vpn-example-com.pem'
 ```
+ or
 
 CA dir:
 ```
 vpnc::cadir: '/etc/vpnc'
 ```
 
-
+Add `local port 0`, in order to use a random source port for each VPN connection. This setting allows multiple VPN connections to run at once. 
+```
+vpnc::localport0: true
+```
+ 
 ## Limitations
 
 This is where you list OS compatibility, version compatibility, etc. If there

@@ -32,9 +32,9 @@ vpnc::password: 'internet'
 ### Authentication mode: 
 IKE Authmode <psk/cert/hybrid>
 
-- psk: pre-shared key (default)
-- cert: server + client certificate (not implemented yet)
-- hybrid: server certificate + xauth (if built with openssl support)
+- `psk`: pre-shared key (default)
+- `cert`: server + client certificate (not implemented yet)
+- `hybrid`: server certificate + xauth (if built with openssl support)
 
 
 IKE Authmode defaults to `psk`. To change it add a new value for `ike_authmode` variable in hiera.

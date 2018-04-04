@@ -1,6 +1,3 @@
-<<<<<<< HEAD
-# vpnc
-
 #### Table of Contents
 
 1. [Description](#description)

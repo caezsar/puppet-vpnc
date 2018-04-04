@@ -53,26 +53,21 @@ class vpnc (
   $cafile		= undef,
   $cadir		= undef,
 )
-
-{
-    package { 'vpnc':
+{ package { 'vpnc':
     ensure => 'installed',
   }
 
-  service { 'vpnc':
-    ensure     => stopped,
-    hasstatus  => false,
-    hasrestart => false,
+#  service { 'vpnc':
+#    ensure     => stopped,
+#    hasstatus  => false,
+#    hasrestart => false,
+#  }
 
-  }
-
-	file { '/etc/vpnc/default.conf':
-    mode => '640',
-    owner => root,
-    group => root,
+  file { '/etc/vpnc/default.conf':
+    mode    => '0640',
+    owner   => root,
+    group   => root,
     content => template('vpnc/default.conf.erb'),
-    require    => Package['vpnc'],
-
+    require => Package['vpnc'],
 }
-
 }

@@ -8,12 +8,13 @@
   "project_page": "https://github.com/caezsar/puppet-vpnc",
   "issues_url": "https://github.com/caezsar/puppet-vpnc",
   "dependencies": [
-    {"name": "puppetlabs-stdlib","version_requirement":">= 1.0.0"}
+    {
+      "name": "puppetlabs-stdlib","version_requirement":">= 1.0.0"
+    }
   ],
-  "data_provider": null
-    "description": "Module for managing and configuring Cisco VPNC Client",
+  "data_provider": null,
+  "description": "Module for managing and configuring Cisco VPNC Client",
   "operatingsystem_support": [
-
     {
       "operatingsystem": "Debian",
       "operatingsystemrelease": [
@@ -29,7 +30,5 @@
         "16.04"
       ]
     }
-
   ]
 }
-

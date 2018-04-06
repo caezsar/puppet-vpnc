@@ -20,6 +20,7 @@ class vpnc (
   $cafile    = undef,
   $cadir    = undef,
   $localport0 = false,
+  $script = undef,
 )
 
 { package { 'vpnc':
@@ -37,6 +38,14 @@ class vpnc (
     owner   => root,
     group   => root,
     content => template('vpnc/default.conf.erb'),
+    require => Package['vpnc'],
+}
+
+  file { '/etc/vpnc/no_resolvconf_update':
+    mode    => '0755',
+    owner   => root,
+    group   => root,
+    source  => 'puppet:///modules/vpnc/no_resolvconf_update',
     require => Package['vpnc'],
 }
 }

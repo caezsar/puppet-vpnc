@@ -21,6 +21,7 @@ class vpnc (
   $cadir    = undef,
   $localport0 = false,
   $script = undef,
+  $interface_name = undef,
 )
 
 { package { 'vpnc':

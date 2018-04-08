@@ -1,0 +1,9 @@
+#!/bin/sh
+
+# This script is just here to disable update of resolv.conf
+
+# unset DNS variable
+unset INTERNAL_IP4_DNS
+
+# Call normal vpnc script
+. /usr/share/vpnc-scripts/vpnc-script

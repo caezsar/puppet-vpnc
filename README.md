@@ -61,6 +61,16 @@ Add `local port 0`, in order to use a random source port for each VPN connection
 vpnc::localport0: true
 ```
  
+Add `script /path/to/my_super_script`, in order to use a custom script to disable resolv.conf update for example
+```
+vpnc::script: '/etc/vpnc/no_resolvconf_update'
+```
+
+Add `interface name my_favorite_name`, in order to have a predictable name for the vpn interface
+```
+vpnc::interface_name: 'my_vpn'
+```
+
 ## Limitations
 
 This is where you list OS compatibility, version compatibility, etc. If there

@@ -14,3 +14,9 @@ CA-Dir <%= @cadir %>
 <% if @localport0 == true -%>
 local port 0 
 <% end -%>
+<% if @script -%>
+Script <%= @script %>
+<% end -%>
+<% if @interface_name -%>
+interface name <%= @interface_name %>
+<% end -%>

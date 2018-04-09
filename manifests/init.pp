@@ -22,17 +22,24 @@ class vpnc (
   $localport0 = false,
   $script = undef,
   $interface_name = undef,
+  $enable_by_systemd = false,
 )
 
 { package { 'vpnc':
     ensure => 'installed',
   }
 
-#  service { 'vpnc':
-#    ensure     => stopped,
-#    hasstatus  => false,
-#    hasrestart => false,
-#  }
+  ::systemd::unit_file { 'vpnc.service' :
+    source => 'puppet:///modules/vpnc/vpnc.systemd',
+  } 
+
+  if $enable_by_systemd {
+
+    service { 'vpnc' :
+      ensure => 'running',
+      enable => true,
+    }
+  }
 
   file { '/etc/vpnc/default.conf':
     mode    => '0600',

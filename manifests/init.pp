@@ -11,27 +11,28 @@
 #
 class vpnc (
 
-  $gateway    = undef,
-  $id      = '',
-  $secret    = '',
-  $username    = '',
-  $password    = '',
-  $ike_authmode  = 'psk',
-  $cafile    = undef,
-  $cadir    = undef,
-  $localport0 = false,
-  $script = undef,
-  $interface_name = undef,
+  $gateway           = undef,
+  $id                = '',
+  $secret            = '',
+  $username          = '',
+  $password          = '',
+  $ike_authmode      = 'psk',
+  $cafile            = undef,
+  $cadir             = undef,
+  $localport0        = false,
+  $script            = undef,
+  $interface_name    = undef,
   $enable_by_systemd = false,
-)
 
-{ package { 'vpnc':
+) {
+
+  package { 'vpnc':
     ensure => 'installed',
   }
 
   ::systemd::unit_file { 'vpnc.service' :
     source => 'puppet:///modules/vpnc/vpnc.systemd',
-  } 
+  }
 
   if $enable_by_systemd {
 
@@ -47,7 +48,7 @@ class vpnc (
     group   => root,
     content => template('vpnc/default.conf.erb'),
     require => Package['vpnc'],
-}
+  }
 
   file { '/etc/vpnc/no_resolvconf_update':
     mode    => '0755',
@@ -55,5 +56,5 @@ class vpnc (
     group   => root,
     source  => 'puppet:///modules/vpnc/no_resolvconf_update',
     require => Package['vpnc'],
-}
+  }
 }

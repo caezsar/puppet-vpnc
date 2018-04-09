@@ -26,6 +26,7 @@ vpnc::id: 'internet'
 vpnc::secret: 'internet'
 vpnc::username: 'internet'
 vpnc::password: 'internet'
+vpnc::enable_by_systemd: true
 ```
 
 
@@ -69,6 +70,11 @@ vpnc::script: '/etc/vpnc/no_resolvconf_update'
 Add `interface name my_favorite_name`, in order to have a predictable name for the vpn interface
 ```
 vpnc::interface_name: 'my_vpn'
+```
+
+Enable systemd to manage vpnc connect/disconnect for default profile
+```
+vpnc::enable_by_systemd: true
 ```
 
 ## Limitations

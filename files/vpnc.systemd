@@ -1,0 +1,16 @@
+[Unit]
+Description=Free Cisco VPN connection to default profile
+Documentation=man:vpnc(8) http://www.unix-ag.uni-kl.de/~massar/vpnc/
+Requires=network.target
+After=network.target
+ConditionPathExists=/dev/net/tun
+
+[Service]
+Type=forking
+PIDFile=/run/vpnc.pid
+
+ExecStart=/usr/sbin/vpnc-connect
+ExecStop=/usr/sbin/vpnc-disconnect
+
+[Install]
+WantedBy=multi-user.target

@@ -9,7 +9,12 @@
   "issues_url": "https://github.com/caezsar/puppet-vpnc",
   "dependencies": [
     {
-      "name": "puppetlabs-stdlib","version_requirement":">= 1.0.0"
+      "name": "puppetlabs-stdlib",
+      "version_requirement":">= 1.0.0"
+    },
+    {
+      "name": "pcamptocamp-systemd",
+      "version_requirement":">= 0.3.0"
     }
   ],
   "data_provider": null,

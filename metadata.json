@@ -13,7 +13,7 @@
       "version_requirement":">= 1.0.0"
     },
     {
-      "name": "pcamptocamp-systemd",
+      "name": "camptocamp-systemd",
       "version_requirement":">= 0.3.0"
     }
   ],

@@ -1,6 +1,6 @@
 {
   "name": "caezsar-vpnc",
-  "version": "0.1.2",
+  "version": "0.1.3",
   "author": "caezsar",
   "summary": "Puppet module to manage Cisco vpnc client",
   "license": "Apache-2.0",
